@@ -39,7 +39,7 @@
 .question-option-edit {
     width: 20px;
     height: 20px;
-    background-image: url('images/icon-edit.png');
+    background-image: url('/icon-edit.png');
     background-repeat: no-repeat;
     background-position: 2px 2px;
     display: inline-block;
@@ -54,7 +54,7 @@
 .question-option-delete {
     width: 20px;
     height: 20px;
-    background-image: url('images/icon-delete.png');
+    background-image: url('/icon-delete.png');
     background-repeat: no-repeat;
     background-position: 2px 2px;
     display: inline-block;
@@ -69,7 +69,7 @@
 .question-option-sort {
     width: 20px;
     height: 20px;
-    background-image: url('images/icon-sort.png');
+    background-image: url('/icon-sort.png');
     background-repeat: no-repeat;
     background-position: 2px 2px;
     display: inline-block;
@@ -100,17 +100,17 @@
         only screen and (min-resolution: 1.5dppx)
 {
     .question-option-edit {
-        background-image: url('images/icon-edit@2x.png');
+        background-image: url('/icon-edit@2x.png');
         background-size: 16px 16px;
     }
 
     .question-option-delete {
-        background-image: url('images/icon-delete@2x.png');
+        background-image: url('/icon-delete@2x.png');
         background-size: 16px 16px;
     }
 
     .question-option-sort {
-        background-image: url('images/icon-sort@2x.png');
+        background-image: url('/icon-sort@2x.png');
         background-size: 16px 16px;
     }
 }

@@ -1,9 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import layout from '../styles/Layout.module.css'
 import grid from '../styles/Grid.module.css'
 import form from '../styles/Form.module.css'
 import setup from '../styles/Setup.module.css'
+import Question from '../component/Question'
 
 
 export default function Home() {
@@ -45,10 +47,11 @@ export default function Home() {
 							</div>
 							<h3>Velkomst tekst</h3>
 						</div>
+						<Question />
 						<div className="question">
 							<div>
 								<div className="question-type">
-                <Image src="/icon-radiobox.png" srcSet="/icon-radiobox@2x.png 2x" width="20px" height="20px"/>
+                				<Image src="/icon-radiobox.png" srcSet="/icon-radiobox@2x.png 2x" width="20px" height="20px"/>
 								</div>
 								<div className="question-options">
 									<div className="question-option-edit"></div>
@@ -77,7 +80,7 @@ export default function Home() {
 						</div>
 						<div className="question">
 							<div className="question-type">
-              <Image src="/icon-checkbox.png" srcSet="/icon-checkbox@2x.png 2x" width="20px" height="20px"/>
+              				<Image src="/icon-checkbox.png" srcSet="/icon-checkbox@2x.png 2x" width="20px" height="20px"/>
 							</div>
 							<div className="question-options">
 								<div className="question-option-edit"></div>
@@ -125,14 +128,18 @@ export default function Home() {
 
 				<div className="row">
 					<div className="col-2 col-offset-8">
-						<a href="questionnaire.html" className="btn btn-default">
-							Gå til besvarelse
-						</a>
+						<Link href="/questionnaire">
+							<a className="btn btn-default">
+								Gå til besvarelse
+							</a>
+						</Link>
 					</div>
 					<div className="col-2">
-						<a href="result.html" className="btn btn-default">
-							Se resultat
-						</a>
+						<Link href="/result">
+							<a className="btn btn-default">
+								Se resultat
+							</a>
+						</Link>
 					</div>
 				</div>
 			</div>
