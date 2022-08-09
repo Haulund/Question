@@ -1,0 +1,115 @@
+.question {
+    min-height: 20px;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    padding: 10px 90px 10px 40px;
+    position: relative;
+    line-height: 20px;
+}
+
+.question + .question {
+    margin-top: 10px;
+}
+
+.question h3 {
+    margin: 5px 0;
+}
+
+.question_type {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+.question_options {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    font-size: 0;
+    line-height: 0;
+}
+
+.question_option_edit {
+    width: 20px;
+    height: 20px;
+    background-image: url('/public/icon-edit.png');
+    background-repeat: no-repeat;
+    background-position: 2px 2px;
+    display: inline-block;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.question_option_edit:hover {
+    opacity: 0.8;
+}
+
+.question_option_delete {
+    width: 20px;
+    height: 20px;
+    background-image: url('/public/icon-delete.png');
+    background-repeat: no-repeat;
+    background-position: 2px 2px;
+    display: inline-block;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.question_option_delete:hover {
+    opacity: 0.8;
+}
+
+.question_option_sort {
+    width: 20px;
+    height: 20px;
+    background-image: url('/public/icon-sort.png');
+    background-repeat: no-repeat;
+    background-position: 2px 2px;
+    display: inline-block;
+    opacity: 0.4;
+    cursor: move;
+}
+
+.question_option_sort:hover {
+    opacity: 0.8;
+}
+
+.question-placeholder {
+    height: 20px;
+    border: 1px dashed #cccccc;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 10px;
+    position: relative;
+    line-height: 20px;
+    color: #808080;
+}
+
+@media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (-moz-min-device-pixel-ratio: 1.5),
+        only screen and (-o-min-device-pixel-ratio: 3/2),
+        only screen and (min-device-pixel-ratio: 1.5),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 1.5dppx)
+{
+    .question_option_edit {
+        background-image: url('/public/icon-edit@2x.png');
+        background-size: 16px 16px;
+    }
+
+    .question_option_delete {
+        background-image: url('/public/icon-delete@2x.png');
+        background-size: 16px 16px;
+    }
+
+    .question_option_sort {
+        background-image: url('/public/icon-sort@2x.png');
+        background-size: 16px 16px;
+    }
+}

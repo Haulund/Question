@@ -1,26 +1,115 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+body {
+	background: #f2f6f7;
+	margin: 0;
+	padding: 40px 0px;
+	color: #3D4A56;
+	font-size: 12px;
+	line-height: 18px;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	font-weight: 300;
+}
+
+
+
+/* Media queiries */
+
+@media only screen and (min-width: 320px) {
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* DIALOG 																												*/
+
+	.dialog-overlay {
+		padding: 15px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* DIALOG 																												*/
+
+	.dialog-overlay {
+		padding: 20px;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	body {
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* DIALOG 																												*/
+
+	.dialog-overlay {
+		padding: 30px;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	body {
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* DIALOG 																												*/
+
+	.dialog-overlay {
+		padding: 40px;
+	}
+
+	/* ------------------------------------------------------------------------ */
+	/* DIALOG - CONTENT															*/
+
+	.dialog-content {
+		padding: 15px;
+	}
+
+	/* ------------------------------------------------------------------------ */
+	/* DIALOG - FOOTER															*/
+
+	.dialog-footer {
+		padding: 15px;
+	}
+}
+
+@media only screen and (min-width: 1600px) {
+	body {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* CHART 																												*/
+
+	.bar-chart .progress {
+		height: 30px;
+	}
+
+	.bar-chart .progress .progress-bar {
+		font-size: 12px;
+		line-height: 30px;
+	}
+
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* DIALOG 																												*/
+
+	/* ------------------------------------------------------------------------ */
+	/* DIALOG - CONTENT															*/
+
+	.dialog-content {
+		padding: 20px;
+	}
+
+	/* ------------------------------------------------------------------------ */
+	/* DIALOG - FOOTER															*/
+
+	.dialog-footer {
+		padding: 20px;
+	}
 }
