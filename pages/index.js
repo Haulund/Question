@@ -42,7 +42,7 @@ export default function Home() {
               <div className={layout.question}>
                 <div>
                   <div className={setup.question_type}>
-                    <Image src="/icon-radiobox.png" srcset="/icon-radiobox@2x.png 2x" width="20px" height="20px"/>
+                    <Image src="/icon-radiobox.png" srcSet="/icon-radiobox@2x.png 2x" width="20px" height="20px"/>
                   </div>
                   <div className={setup.question_options}>
                     <div className={setup.question_option_edit}></div>
@@ -71,7 +71,7 @@ export default function Home() {
               </div>
               <div className={layout.question}>
                 <div className={setup.question_type}>
-                  <Image src="/icon-checkbox.png" srcset="/icon-checkbox@2x.png 2x" width="20px" height="20px"/>
+                  <Image src="/icon-checkbox.png" srcSet="/icon-checkbox@2x.png 2x" width="20px" height="20px"/>
                 </div>
                 <div className={setup.question_options}>
                   <div className={setup.question_option_edit}></div>
