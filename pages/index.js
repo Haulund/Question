@@ -1,14 +1,42 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
+
+// styling via nextjs -- deprecated
 import layout from '../styles/Layout.module.css'
 import grid from '../styles/Grid.module.css'
 import form from '../styles/Form.module.css'
 import setup from '../styles/Setup.module.css'
-import Question from '../component/Question'
+
+// components
+import WelcomeText from '../component/WelcomeText'
+import QuestionList from '../component/QuestionList'
+import QuestionSorter from '../component/QuestionSorter'
+import EndText from '../component/EndText'
+
+// hooks
+import { useState } from 'react'
 
 
 export default function Home() {
+
+	const [arrayOfQuestions, setArrayOfQuestions] = useState([
+		{title: "spørgsmål 1", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel nisl eu massa mollis finibus. Aenean pulvinar lacus ut purus laoreet egestas.", inputs: [{text: "hest"}, {text: "hest"}]},
+		{title: "spørgsmål 2", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel nisl eu massa mollis finibus. Aenean pulvinar lacus ut purus laoreet egestas.", inputs: [{text: "hest"}, {text: "hest"}, {text: "hest"}]},
+		{title: "spørgsmål 3", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel nisl eu massa mollis finibus. Aenean pulvinar lacus ut purus laoreet egestas.", inputs: [{text: "ko"}, {text: "ko"}, {text: "ko"}]}
+	])
+
+	const createQuestion = () => {
+		const overlay = document.getElementById('dialogAddQuestion')
+		overlay.style.display = "block"
+		
+	}
+
+	const closeDialog = e => {
+		const overlay = document.querySelectorAll('#dialogEditWelcome, #dialogAddQuestion, #dialogEditClosing')
+		overlay.forEach( (item) => {
+			item.style.display = "none"
+		})
+	}
   return (
     <>
       <Head>
@@ -31,7 +59,7 @@ export default function Home() {
 						<h1>Opsætning af spørgeskema</h1>
 					</div>
 					<div className="col-2">
-						<button className="btn btn-secondary" id="btnAddQuestion">
+						<button onClick={createQuestion} className="btn btn-secondary" id="btnAddQuestion">
 							Opret spørgsmål
 						</button>
 					</div>
@@ -41,86 +69,10 @@ export default function Home() {
 
 				<div className="row">
 					<div className="col-12">
-						<div className="question" style={{paddingLeft: '10px'}}>
-							<div className="question-options">
-								<div className="question-option-edit" id="btnEditWelcome"></div>
-							</div>
-							<h3>Velkomst tekst</h3>
-						</div>
-						<Question />
-						<div className="question">
-							<div>
-								<div className="question-type">
-                				<Image src="/icon-radiobox.png" srcSet="/icon-radiobox@2x.png 2x" width="20px" height="20px"/>
-								</div>
-								<div className="question-options">
-									<div className="question-option-edit"></div>
-									<div className="question-option-delete"></div>
-									<div className="question-option-sort"></div>
-								</div>
-								<h3>Spørgsmål 1</h3>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel nisl eu massa mollis finibus. Aenean pulvinar lacus ut purus laoreet egestas.
-								</p>
-							</div>
-							<div className="form">
-								<div className="radio">
-									<input type="radio" name="radio-1" disabled /> Hest
-								</div>
-								<div className="radio">
-									<input type="radio" name="radio-1" disabled /> Hest
-								</div>
-								<div className="radio">
-									<input type="radio" name="radio-1" disabled /> Hest
-								</div>
-								<div className="radio">
-									<input type="radio" name="radio-1" disabled /> Hest
-								</div>
-							</div>
-						</div>
-						<div className="question">
-							<div className="question-type">
-              				<Image src="/icon-checkbox.png" srcSet="/icon-checkbox@2x.png 2x" width="20px" height="20px"/>
-							</div>
-							<div className="question-options">
-								<div className="question-option-edit"></div>
-								<div className="question-option-delete"></div>
-								<div className="question-option-sort"></div>
-							</div>
-							<h3>Spørgsmål 2</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel nisl eu massa mollis finibus. Aenean pulvinar lacus ut purus laoreet egestas.
-							</p>
-							<div className="checkbox">
-								<label>
-									<input type="checkbox" name="checkbox-1" disabled /> Hest
-								</label>
-							</div>
-							<div className="checkbox">
-								<label>
-									<input type="checkbox" name="checkbox-1" disabled /> Hest
-								</label>
-							</div>
-							<div className="checkbox">
-								<label>
-									<input type="checkbox" name="checkbox-1" disabled /> Hest
-								</label>
-							</div>
-							<div className="checkbox">
-								<label>
-									<input type="checkbox" name="checkbox-1" disabled /> Hest
-								</label>
-							</div>
-						</div>
-						<div className="question-placeholder">
-							Placér spørgsmålet her
-						</div>
-						<div className="question" style={{paddingLeft: '10px'}}>
-							<div className="question-options">
-								<div className="question-option-edit" id="btnEditClosing"></div>
-							</div>
-							<h3>Afslutnings tekst</h3>
-						</div>
+						<WelcomeText />
+						{arrayOfQuestions && <QuestionList array={arrayOfQuestions}/>}
+						<QuestionSorter />
+						<EndText />
 					</div>
 				</div>
 
@@ -274,7 +226,7 @@ export default function Home() {
 						</form>
 					</div>
 					<div className="dialog-footer">
-						<button className="btn btn-default btn-closedialog">
+						<button onClick={closeDialog} className="btn btn-default btn-closedialog">
 							Annuller
 						</button>
 						<button className="btn btn-secondary">

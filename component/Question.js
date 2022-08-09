@@ -1,6 +1,7 @@
+// component
 import Image from 'next/image'
 
-const Question = () => {
+const Question = (props) => {
     return (
         <div className="question">
             <div>
@@ -12,24 +13,17 @@ const Question = () => {
                     <div className="question-option-delete"></div>
                     <div className="question-option-sort"></div>
                 </div>
-                <h3>Spørgsmål 1</h3>
+                <h3>{ props.title }</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel nisl eu massa mollis finibus. Aenean pulvinar lacus ut purus laoreet egestas.
+                    { props.desc }
                 </p>
             </div>
             <div className="form">
-                <div className="radio">
-                    <input type="radio" name="radio-1" disabled /> Hest
-                </div>
-                <div className="radio">
-                    <input type="radio" name="radio-1" disabled /> Hest
-                </div>
-                <div className="radio">
-                    <input type="radio" name="radio-1" disabled /> Hest
-                </div>
-                <div className="radio">
-                    <input type="radio" name="radio-1" disabled /> Hest
-                </div>
+                {props.inputs.map( input => (
+                    <div className="radio">
+                        <input type="radio" name="radio-1" disabled /> { input.text }
+                    </div>
+                ))}
             </div>
         </div>  
     );
