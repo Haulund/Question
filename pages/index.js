@@ -11,12 +11,13 @@ export default function Home() {
     <>
       <Head>
         <title>Setup</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta content="initial-scale=1.0, user-scalable=no" name="viewport" />
         <link type="text/css" rel="stylesheet" href="css/grid.css" />
         <link type="text/css" rel="stylesheet" href="css/typography.css" />
         <link type="text/css" rel="stylesheet" href="css/form.css" /> 
         <link href="css/layout.css" rel="stylesheet" type="text/css" />
+        <link href="css/setup.css" rel="stylesheet" type="text/css" />
       </Head>
       <body>
 		<main>
@@ -38,7 +39,7 @@ export default function Home() {
 
 				<div className="row">
 					<div className="col-12">
-						<div className="question" style="padding-left: 10px;">
+						<div className="question" style={{paddingLeft: '10px'}}>
 							<div className="question-options">
 								<div className="question-option-edit" id="btnEditWelcome"></div>
 							</div>
@@ -47,7 +48,7 @@ export default function Home() {
 						<div className="question">
 							<div>
 								<div className="question-type">
-									<img src="images/icon-radiobox.png" srcset="images/icon-radiobox@2x.png 2x" />
+                <Image src="/icon-radiobox.png" srcSet="/icon-radiobox@2x.png 2x" width="20px" height="20px"/>
 								</div>
 								<div className="question-options">
 									<div className="question-option-edit"></div>
@@ -76,7 +77,7 @@ export default function Home() {
 						</div>
 						<div className="question">
 							<div className="question-type">
-								<img src="images/icon-checkbox.png" srcset="images/icon-checkbox@2x.png 2x" />
+              <Image src="/icon-checkbox.png" srcSet="/icon-checkbox@2x.png 2x" width="20px" height="20px"/>
 							</div>
 							<div className="question-options">
 								<div className="question-option-edit"></div>
@@ -111,7 +112,7 @@ export default function Home() {
 						<div className="question-placeholder">
 							Placér spørgsmålet her
 						</div>
-						<div className="question" style="padding-left: 10px;">
+						<div className="question" style={{paddingLeft: '10px'}}>
 							<div className="question-options">
 								<div className="question-option-edit" id="btnEditClosing"></div>
 							</div>
@@ -231,8 +232,8 @@ export default function Home() {
 							</div>
 							<div className="row">
 								<div className="col-12">
-									<div style="border-bottom: 1px solid #8a53a6; padding: 10px 0 10px 0; color: #8a53a6;">
-										<h3 style="margin: 0;">Svarmuligheder</h3>
+									<div style={{borderBottom: '1px solid #8a53a6',padding: '10px 0 10px 0',color: '#8a53a6'}}>
+										<h3 style={{margin: '0'}}>Svarmuligheder</h3>
 									</div>
 								</div>
 								<div className="col-12">
