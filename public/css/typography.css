@@ -1,0 +1,104 @@
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* GENERAL																													*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900');
+
+/* ---------------------------------------------------------------------------- */
+/* HEADLINES																	*/
+
+h1 {
+	margin: 0 0 20px 0;
+	font-size: 2.667em;
+	line-height: 1.2em;
+	font-family: 'Titillium Web', Arial, Helvetica, cursive;
+	font-weight: 500;
+}
+
+h2 {
+	margin: 0 0 20px 0;
+	font-size: 2.000em;
+	line-height: 1.2em;
+	font-family: 'Titillium Web', Arial, Helvetica, cursive;
+	font-weight: 500;
+}
+
+h3 {
+	margin: 0 0 10px 0;
+	font-size: 1.333em;
+	line-height: 1.0em;
+	font-family: 'Titillium Web', Arial, Helvetica, cursive;
+	font-weight: 500;
+}
+
+h4 {
+	margin: 0 0 5px 0;
+	font-size: 1.0em;
+	line-height: 1.0em;
+	font-family: 'Montserrat', Arial, Helvetica, cursive;
+	font-weight: 500;
+}
+
+strong {
+	font-weight: 500;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* TEXT ALIGNMENT																											*/
+
+.txt-left {
+	text-align: left;
+}
+
+.txt-center {
+	text-align: center;
+}
+
+.txt-right {
+	text-align: right;
+}
+
+.txt-justify {
+	text-align: justify;
+}
+
+@media only screen and (min-width: 320px) {
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* TEXT ALIGNMENT																										*/
+
+	.txt-xs-left {
+		text-align: left;
+	}
+
+	.txt-xs-center {
+		text-align: center;
+	}
+
+	.txt-xs-right {
+		text-align: right;
+	}
+
+	.txt-xs-justify {
+		text-align: justify;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* TEXT ALIGNMENT																										*/
+
+	.txt-sm-left {
+		text-align: left;
+	}
+
+	.txt-sm-center {
+		text-align: center;
+	}
+
+	.txt-sm-right {
+		text-align: right;
+	}
+
+	.txt-sm-justify {
+		text-align: justify;
+	}
+}

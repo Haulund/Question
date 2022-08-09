@@ -1,0 +1,274 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #f2f6f7;
+	margin: 0;
+	padding: 40px 0px;
+	color: #3D4A56;
+	font-size: 12px;
+	line-height: 18px;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	font-weight: 300;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* QUESTIONAIRE                                                                                     			            */
+
+.question + .question {
+	margin-top: 40px;
+}
+
+.question .answers {
+	margin-top: 20px;
+}
+
+.question .answers .choice {
+	background: #ffffff;
+	border-radius: 4px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	margin: 0 0 10px 0;
+}
+
+.question .answers .choice + .choice {
+	margin-top: 10px;
+}
+
+.question .answers label {
+	padding: 10px 60px 10px 10px;
+	display: block;
+	position: relative;
+	cursor: pointer;
+}
+
+.question .answers .title {
+	margin: 0;
+	color: #3D4A56;
+	font-weight: 500;
+}
+
+.question .answers .response {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin: -28px 0 0 0;
+	padding: 20px;
+	z-index: 1;
+	cursor: pointer;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* CHART 		                                                                                    			            */
+
+.bar-chart ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.bar-chart ol li {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}
+
+.bar-chart ol li + li {
+	margin-top: 10px;
+}
+
+.bar-chart .label {
+	width: 33.3333%;
+	padding-right: 20px;
+}
+
+.bar-chart .progress {
+	width: 100%;
+	height: 20px;
+	background: rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.bar-chart .progress .progress-bar {
+	height: inherit;
+	background: #8a53a6;
+	padding: 0 5px;
+	box-sizing: border-box;
+	color: rgba(255, 255, 255, 0.4);
+	font-size: 11px;
+	line-height: 20px;
+	text-align: right;
+}
+
+.bar-chart .number {
+	width: 200px;
+	padding-left: 40px;
+	font-weight: 500;
+	text-align: right;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* DIALOG 		                                                                                    			            */
+
+.dialog-overlay {
+	background: rgba(0, 0, 0, 0.8);
+	padding: 40px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9999;
+	display: none;
+}
+
+.dialog {
+	max-width: 800px;
+	max-height: 100%;
+	background: #ffffff;
+	border-radius: 4px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* DIALOG - CONTENT																*/
+
+.dialog-content {
+	padding: 15px;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* DIALOG - FOOTER																*/
+
+.dialog-footer {
+	background: #e6e6e6;
+	border-top: 1px solid #cccccc;
+	padding: 15px;
+	text-align: right;
+}
+
+.dialog-footer .btn {
+	width: auto;
+	vertical-align: top;
+}
+
+.dialog-footer .btn + .btn {
+	margin-left: 10px;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* ADD QUESTION DIALOG															*/
+
+.dialog-add-question {
+	max-width: 800px;
+}
+
+@media only screen and (min-width: 320px) {
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* DIALOG 																												*/
+
+	.dialog-overlay {
+		padding: 15px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* DIALOG 																												*/
+
+	.dialog-overlay {
+		padding: 20px;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	body {
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* DIALOG 																												*/
+
+	.dialog-overlay {
+		padding: 30px;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	body {
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* DIALOG 																												*/
+
+	.dialog-overlay {
+		padding: 40px;
+	}
+
+	/* ------------------------------------------------------------------------ */
+	/* DIALOG - CONTENT															*/
+
+	.dialog-content {
+		padding: 15px;
+	}
+
+	/* ------------------------------------------------------------------------ */
+	/* DIALOG - FOOTER															*/
+
+	.dialog-footer {
+		padding: 15px;
+	}
+}
+
+@media only screen and (min-width: 1600px) {
+	body {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* CHART 																												*/
+
+	.bar-chart .progress {
+		height: 30px;
+	}
+
+	.bar-chart .progress .progress-bar {
+		font-size: 12px;
+		line-height: 30px;
+	}
+
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* DIALOG 																												*/
+
+	/* ------------------------------------------------------------------------ */
+	/* DIALOG - CONTENT															*/
+
+	.dialog-content {
+		padding: 20px;
+	}
+
+	/* ------------------------------------------------------------------------ */
+	/* DIALOG - FOOTER															*/
+
+	.dialog-footer {
+		padding: 20px;
+	}
+}

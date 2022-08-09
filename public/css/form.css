@@ -1,0 +1,681 @@
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* FORMS																													*/
+
+.form .row {
+	margin: 0 -10px 0 -10px;
+}
+
+.form div[class*="col-"], .form div[class^="col-"] {
+	padding: 10px 10px;
+}
+
+.form .fieldname {
+	padding-bottom: 0;
+	line-height: 30px;
+	text-align: left;
+}
+
+.form .fieldname label {
+	margin: 0 20px 0 0;
+	display: block;
+	vertical-align: middle;
+}
+
+.form label {
+	margin: 0 5px 0 0;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.form .required {
+	color: #e51728;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* FORMS - GROUP																*/
+
+.form .groupVertical, .form .groupHorizontal {
+	display: inline-block;
+}
+
+.form .groupVertical .group {
+	display: block;
+	margin: 0 0 10px 0;
+}
+
+.form .groupVertical .group:last-child {
+	margin: 0;
+}
+
+.form .groupHorizontal .group {				
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+
+.form .groupHorizontal .group:last-child {				
+	margin: 0;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* FORMS - INPUTS																*/
+
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="email"],
+.form input[type="number"],
+.form input[type="tel"],
+.form input[type="date"],
+.form input[type="time"] {
+	width: 100%;
+	height: 30px;
+	border: 1px solid #cccccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0 10px;
+	display: block;
+	outline: none;
+	font-size: 1.0em;
+	line-height: 30px;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	font-weight: 300;
+
+	-webkit-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+	-moz-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+	-o-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+	transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form input[type="text"]:focus,
+.form input[type="password"]:focus,
+.form input[type="email"]:focus,
+.form input[type="number"]:focus,
+.form input[type="tel"]:focus,
+.form input[type="date"]:focus,
+.form input[type="time"]:focus {
+	border: 1px solid #73bfe5;
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 1px #73bfe5;
+	-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 1px #73bfe5;
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 1px #73bfe5;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* FORMS - SELECT																*/
+
+.form select {
+	width: 100%;
+	height: 30px;
+	background: #ffffff;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f2f2f2 100%);
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f2f2f2 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#f2f2f2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 );
+	border: 1px solid #cccccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 8px 10px;
+	display: block;
+	line-height: 30px;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	font-weight: 300;
+
+	-webkit-transition: border 0.2s ease-in-out;
+	-moz-transition: border 0.2s ease-in-out;
+	-o-transition: border 0.2s ease-in-out;
+	transition: border 0.2s ease-in-out;
+}
+
+.form select:focus {
+	border: 1px solid #73bfe5;
+	-webkit-box-shadow: 0 0 0 1px #73bfe5;
+	-moz-box-shadow: 0 0 0 1px #73bfe5;
+	box-shadow: 0 0 0 1px #73bfe5;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* FORMS - TEXTAREA																*/
+
+.form textarea {
+	width: 100%;
+	height: 140px;
+	border: 1px solid #cccccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 8px 10px;
+	display: block;
+	resize: vertical;
+	color: #333333;
+	font-size: 1.0em;
+	line-height: 1.2em;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	outline: none;
+
+	-webkit-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+	-moz-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+	-o-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+	transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form textarea:focus {
+	border: 1px solid #73bfe5;
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 1px #73bfe5;
+	-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 1px #73bfe5;
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 1px #73bfe5;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* FORMS - CHECKBOX	& RADIO BUTTON												*/
+
+.form .checkbox, .form .radio {
+	padding: 0 0 0 20px;
+}
+
+.form .checkbox:first-child, .form .radio:first-child {
+	margin: 2px 0 0 0;
+}
+
+.form .checkbox label, .form .radio label {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin: 0 0 0 -20px;
+	padding: 4px 6px 4px 28px;
+	display: inline-block;
+}
+
+.form .checkbox label:hover, .form .radio label:hover {
+	background: rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+}
+
+.form .checkbox input[type="checkbox"], .form .radio input[type="radio"] {
+	margin: 3px 0 0 -22px;
+	float: left;
+	display: block;
+	vertical-align: middle;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* FORMS - INLINE CHECKBOX & RADIO BUTTON										*/
+
+.form .checkbox-inline, .form .radio-inline {
+	margin: 2px 0 0 10px;
+	padding: 0 0 0 20px;
+	display: inline-block;
+}
+
+.form .checkbox-inline:first-child, .form .radio-inline:first-child {
+	margin: 2px 0 0 0;
+}
+
+.form .checkbox-inline label, .form .radio-inline label {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin: 0 0 0 -20px;
+	padding: 4px 6px 4px 28px;
+	display: inline-block;
+}
+
+.form .checkbox-inline label:hover, .form .radio-inline label:hover {
+	background: rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+}
+
+.form .checkbox-inline input[type="checkbox"], .form .radio-inline input[type="radio"] {
+	margin: 3px 0 0 -22px;
+	float: left;
+	display: block;
+	vertical-align: middle;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* FORMS - SWITCH																*/
+
+.switch {
+	width: 30px;
+	height: 15px;
+	background: #cccccc;
+	background: rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	cursor: pointer;
+
+	-moz-transition: .25s ease-in-out;
+	-webkit-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+}
+
+.switch .handler {
+	width: 13px;
+	height: 13px;
+	background: #ffffff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	display: block;
+	position: absolute;
+	top: 1px;
+	left: 2px;
+
+	-webkit-transition: .25s ease-in-out;
+	-moz-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+}
+
+.switch.active {
+	background: #a5d941;
+}
+
+.switch.active .handler {
+	left: 16px;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* ERROR VALIDATION																*/
+
+.form .stateError {
+	color: red;
+}
+
+.form .stateError input[type="text"],
+.form .stateError input[type="password"],
+.form .stateError input[type="email"],
+.form .stateError input[type="number"],
+.form .stateError input[type="tel"],
+.form .stateError input[type="date"],
+.form .stateError input[type="time"] {
+	background: #fdf3f2;
+	border: 1px solid red;
+	color: red;
+}
+
+.form .stateError select {
+	background: #fdf3f2;
+	border: 1px solid red;
+	color: red;
+}
+
+.form .stateError textarea {
+	background: #fdf3f2;
+	border: 1px solid red;
+	color: red;
+}
+
+.form .stateError .helptext {
+	margin: 5px 0 -5px 0;
+	color: red;
+	font-size: 0.9em;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* SUCCESS VALIDATION															*/
+
+.form .stateSuccess input[type="text"],
+.form .stateSuccess input[type="password"],
+.form .stateSuccess input[type="email"],
+.form .stateSuccess input[type="number"],
+.form .stateSuccess input[type="tel"],
+.form .stateSuccess input[type="date"],
+.form .stateSuccess input[type="time"] {
+	border: 1px solid #c4d651;
+}
+
+.form .stateSuccess select {
+	border: 1px solid #c4d651;
+}
+
+.form .stateSuccess textarea {
+	border: 1px solid #c4d651;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* BUTTONS																													*/
+
+.btn, a.btn {
+	width: 100%;
+	height: 30px;
+	border: 0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 15px;
+	display: inline-block;
+	cursor: pointer;
+	font-size: 1.167em;
+	line-height: 30px;
+	font-family: 'Titillium Web', Arial, Helvetica, cursive;
+	font-weight: 400;
+	text-align: center;
+	text-decoration: none;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* INLINE BUTTON																*/
+
+.btn-inline, a.btn-inline {
+	width: auto;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* DEFAULT BUTTON																*/
+
+.btn-default, a.btn-default {
+	background: none;
+	border: 1px solid #999999;
+	color: #999999;
+}
+
+.btn-default:hover, a.btn-default:hover, .btn-default:focus, a.btn-default:focus {	
+	border: 1px solid #808080;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* PRIMARY BUTTON																*/
+
+.btn-primary, a.btn-primary {
+	background: rgb(168,191,57);
+	background: -moz-linear-gradient(left, rgba(168,191,57,1) 0%, rgba(191,217,65,1) 100%);
+	background: -webkit-linear-gradient(left, rgba(168,191,57,1) 0%,rgba(191,217,65,1) 100%);
+	background: linear-gradient(to right, rgba(168,191,57,1) 0%,rgba(191,217,65,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8bf39', endColorstr='#bfd941',GradientType=1 );
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 8px 5px -5px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 8px 5px -5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 8px 5px -5px rgba(0, 0, 0, 0.2);
+	text-shadow: 0 1px 0px rgba(0, 0, 0, 0.2);
+	color: #ffffff;
+}
+
+.btn-primary:hover, a.btn-primary:hover, .btn-primary:focus, a.btn-primary:focus {
+	background: rgb(157,178,53);
+	background: -moz-linear-gradient(left, rgba(157,178,53,1) 0%, rgba(180,204,61,1) 100%);
+	background: -webkit-linear-gradient(left, rgba(157,178,53,1) 0%,rgba(180,204,61,1) 100%);
+	background: linear-gradient(to right, rgba(157,178,53,1) 0%,rgba(180,204,61,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9db235', endColorstr='#b4cc3d',GradientType=1 );
+}
+
+/* ---------------------------------------------------------------------------- */
+/* SECONDARY BUTTON																*/
+
+.btn-secondary, a.btn-secondary {
+	background: rgb(127,76,153);
+	background: -moz-linear-gradient(left, rgba(127,76,153,1) 0%, rgba(138,82,165,1) 100%);
+	background: -webkit-linear-gradient(left, rgba(127,76,153,1) 0%,rgba(138,82,165,1) 100%);
+	background: linear-gradient(to right, rgba(127,76,153,1) 0%,rgba(138,82,165,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f4c99', endColorstr='#8a52a5',GradientType=1 );
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 8px 5px -5px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 8px 5px -5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 8px 5px -5px rgba(0, 0, 0, 0.2);
+	color: #ffffff;
+}
+
+.btn-secondary:hover, a.btn-secondary:hover, .btn-secondary:focus, a.btn-secondary:focus {
+	background: rgb(116,70,140);
+	background: -moz-linear-gradient(left, rgba(116,70,140,1) 0%, rgba(128,77,153,1) 100%);
+	background: -webkit-linear-gradient(left, rgba(116,70,140,1) 0%,rgba(128,77,153,1) 100%);
+	background: linear-gradient(to right, rgba(116,70,140,1) 0%,rgba(128,77,153,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#74468c', endColorstr='#804d99',GradientType=1 );
+}
+
+/* ---------------------------------------------------------------------------- */
+/* SECONDARY BUTTON																*/
+
+.btn-secondary-line, a.btn-secondary-line {
+	background: none;
+	border: 1px solid #8a53a6;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 8px 5px -5px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 8px 5px -5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 8px 5px -5px rgba(0, 0, 0, 0.2);
+	color: #7f4c99;
+}
+
+.btn-secondary-line:hover, a.btn-secondary-line:hover, .btn-secondary-line:focus, a.btn-secondary-line:focus {
+	border: 1px solid #75468c;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* ALERTS																													*/
+
+.alert {
+	background: #e51739;
+	border-radius: 4px;
+	padding: 10px;
+	color: #ffffff;
+}
+
+@media only screen and (min-width: 320px) {
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* FORMS																												*/
+	
+	form .row {
+		margin: 0 -10px 0 -10px;
+	}
+
+	.form div[class*="col-"], .form div[class^="col-"] {
+		padding: 10px 10px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* FORMS																												*/
+	
+	form .row {
+		margin: 0 -10px 20px -10px;
+	}
+
+	.form div[class*="col-"], .form div[class^="col-"] {
+		padding: 10px 10px;
+	}
+
+	.form .group div[class*="col-"] {
+		margin: 20px 0 0 0;
+	}
+
+	.form .group div[class*="col-"]:first-child {
+		margin: 0;
+	}
+	
+	.form .groupVertical, .form .groupHorizontal {
+		display: block;
+	}
+	
+	.form .groupVertical .group, .form .groupHorizontal .group {
+		display: block;
+		margin: 0 0 10px 0;
+	}
+
+	/* ------------------------------------------------------------------------ */
+	/* FORMS - INPUTS															*/
+
+	.form input[type="text"],
+	.form input[type="password"],
+	.form input[type="email"],
+	.form input[type="number"],
+	.form input[type="tel"],
+	.form input[type="date"],
+	.form input[type="time"] {
+		height: 40px;
+		line-height: 40px;
+	}
+
+	/* ------------------------------------------------------------------------ */
+	/* FORMS - SELECT															*/
+
+	.form select {
+		height: 40px;
+		line-height: 40px;
+	}
+
+	/* ------------------------------------------------------------------------ */
+	/* FORMS - SWITCH															*/
+
+	.switch {
+		width: 40px;
+		height: 20px;
+	}
+
+	.switch .handler {
+		width: 18px;
+		height: 18px;
+		left: 1px;
+	}
+
+	.switch.active .handler {
+		left: 21px;
+	}
+	
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* BUTTONS																												*/
+	
+	.btn, a.btn {
+		height: 40px;
+		font-size: 1.00em;
+		line-height: 40px;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* FORMS																												*/
+
+	.form .row {
+		margin: 0 -10px 0 -10px;
+	}
+
+	/* ------------------------------------------------------------------------ */
+	/* FORMS - INPUTS															*/
+
+	.form input[type="text"],
+	.form input[type="password"],
+	.form input[type="email"],
+	.form input[type="number"],
+	.form input[type="tel"],
+	.form input[type="date"],
+	.form input[type="time"] {
+		height: 30px;
+		line-height: 30px;
+	}
+
+	/* ------------------------------------------------------------------------ */
+	/* FORMS - SELECT															*/
+
+	.form select {
+		height: 30px;
+		line-height: 30px;
+	}
+
+	/* ------------------------------------------------------------------------ */
+	/* FORMS - SWITCH															*/
+
+	.switch {
+		width: 40px;
+		height: 20px;
+	}
+
+	.switch .handler {
+		width: 18px;
+		height: 18px;
+		left: 1px;
+	}
+
+	.switch.active .handler {
+		left: 21px;
+	}
+
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* BUTTONS																												*/
+	
+	.btn, a.btn {
+		height: 30px;
+		line-height: 30px;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* FORMS																												*/
+
+	.form .row {
+		margin: 0 -10px 0 -10px;
+	}
+
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* BUTTONS																												*/
+	
+	.btn, a.btn {
+		height: 30px;
+		line-height: 30px;
+	}
+}
+
+@media only screen and (min-width: 1600px) {
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* FORMS																												*/
+
+	.form .row {
+		margin: 0 -10px 0 -10px;
+	}
+
+	/* ------------------------------------------------------------------------ */
+	/* FORMS - INPUTS															*/
+
+	.form input[type="text"],
+	.form input[type="password"],
+	.form input[type="email"],
+	.form input[type="number"],
+	.form input[type="tel"],
+	.form input[type="date"],
+	.form input[type="time"] {
+		height: 40px;
+		line-height: 40px;
+	}
+
+	/* ------------------------------------------------------------------------ */
+	/* FORMS - SELECT															*/
+
+	.form select {
+		height: 40px;
+		line-height: 40px;
+	}
+
+	/* -------------------------------------------------------------------------------------------------------------------- */
+	/* BUTTONS																												*/
+	
+	.btn, a.btn {
+		height: 40px;
+		line-height: 40px;
+	}
+}
