@@ -11,33 +11,19 @@ import setup from '../styles/Setup.module.css'
 import WelcomeText from '../component/WelcomeText'
 import QuestionList from '../component/QuestionList'
 import QuestionSorter from '../component/QuestionSorter'
+import AddQuestionForm from '../component/AddQuestionForm'
 import EndText from '../component/EndText'
 
-// hooks
-import { useState } from 'react'
 
 
-export default function Home() {
 
-	const [arrayOfQuestions, setArrayOfQuestions] = useState([
-		{title: "spørgsmål 1", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel nisl eu massa mollis finibus. Aenean pulvinar lacus ut purus laoreet egestas.", inputs: [{text: "hest"}, {text: "hest"}]},
-		{title: "spørgsmål 2", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel nisl eu massa mollis finibus. Aenean pulvinar lacus ut purus laoreet egestas.", inputs: [{text: "hest"}, {text: "hest"}, {text: "hest"}]},
-		{title: "spørgsmål 3", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel nisl eu massa mollis finibus. Aenean pulvinar lacus ut purus laoreet egestas.", inputs: [{text: "ko"}, {text: "ko"}, {text: "ko"}]}
-	])
-
+const Home = () => {
 	const createQuestion = () => {
 		const overlay = document.getElementById('dialogAddQuestion')
 		overlay.style.display = "block"
-		
 	}
 
-	const closeDialog = e => {
-		const overlay = document.querySelectorAll('#dialogEditWelcome, #dialogAddQuestion, #dialogEditClosing')
-		overlay.forEach( (item) => {
-			item.style.display = "none"
-		})
-	}
-  return (
+	return (
     <>
       <Head>
         <title>Setup</title>
@@ -70,7 +56,7 @@ export default function Home() {
 				<div className="row">
 					<div className="col-12">
 						<WelcomeText />
-						{arrayOfQuestions && <QuestionList array={arrayOfQuestions}/>}
+						<QuestionList />
 						<QuestionSorter />
 						<EndText />
 					</div>
@@ -140,98 +126,7 @@ export default function Home() {
 			<div className="dialog-overlay" id="dialogAddQuestion">
 				<div className="dialog dialog-add-question">
 					<div className="dialog-content">
-						<form className="form">
-							<div className="row">
-								<div className="col-12">
-									<div className="alert">
-										<h3>Fejlbesked</h3>
-										<ul>
-											<li>
-												Fejl 1
-											</li>
-											<li>
-												Fejl 2
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div className="row">
-								<div className="col-12 fieldname">
-									<label>
-										<strong>Spørgsmål</strong>
-									</label>
-								</div>
-								<div className="col-12">
-									<input type="text" />
-								</div>
-							</div>
-							<div className="row">
-								<div className="col-12 fieldname">
-									<label>
-										<strong>Beskrivelse</strong>
-									</label>
-								</div>
-								<div className="col-12">
-									<textarea></textarea>
-								</div>
-							</div>
-							<div className="row">
-								<div className="col-3 fieldname">
-									<label>
-										<strong>Svartype</strong>
-									</label>
-								</div>
-								<div className="col-5">
-									<select>
-										<option>Deltageren må kun vælge en svarmulighed</option>
-										<option>Deltageren må vælge flere af svarmulighederne</option>
-									</select>
-								</div>
-							</div>
-							<div className="row">
-								<div className="col-12">
-									<div style={{borderBottom: '1px solid #8a53a6',padding: '10px 0 10px 0',color: '#8a53a6'}}>
-										<h3 style={{margin: '0'}}>Svarmuligheder</h3>
-									</div>
-								</div>
-								<div className="col-12">
-									<div className="question">
-										<div className="question-type">
-											<input type="radio" disabled />
-										</div>
-										<div className="question-options">
-											<div className="question-option-delete"></div>
-											<div className="question-option-sort"></div>
-										</div>
-										<input type="text" />
-									</div>
-									<div className="question">
-										<div className="question-type">
-											<input type="radio" disabled />
-										</div>
-										<div className="question-options">
-											<div className="question-option-delete"></div>
-											<div className="question-option-sort"></div>
-										</div>
-										<input type="text" />
-									</div>
-								</div>
-								<div className="col-12">
-									<button className="btn btn-secondary-line btn-inline">
-										Tilføj svarmulighed
-									</button>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div className="dialog-footer">
-						<button onClick={closeDialog} className="btn btn-default btn-closedialog">
-							Annuller
-						</button>
-						<button className="btn btn-secondary">
-							Gem
-						</button>
+						<AddQuestionForm />
 					</div>
 				</div>
 			</div>
@@ -269,3 +164,6 @@ export default function Home() {
     </>
   )
 }
+
+
+export default Home

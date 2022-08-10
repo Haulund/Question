@@ -2,10 +2,11 @@
 import Question from "./Question";
 
 // hooks
-import { useState } from "react";
+import { useQuestionsContext } from '../context/questions'
 
 const QuestionList = (props) => {
-    const [arrayQuestions, setArrayQuestions] = useState(props.array)
+    const [arrayQuestions, setArrayQuestions] = useQuestionsContext()
+    console.log(arrayQuestions)
 
     return (
         <>
