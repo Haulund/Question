@@ -1,4 +1,5 @@
 // component
+import EditQuestionForm from '../component/EditQuestionForm'
 import Image from 'next/image'
 //hooks
 import { useQuestionsContext } from '../hooks/useQuestionsContext'
@@ -11,10 +12,12 @@ const Question = (props) => {
     }
 
     const handleEdit = () => {
-        const overlay = document.querySelectorAll('#dialogEditQuestion')
-		overlay.forEach( (item) => {
-			item.style.display = "block"
-		})
+        const overlay = document.getElementById('dialogEditQuestion')
+        console.log(overlay, props.id)
+        const getForm = overlay.getElementsByTagName('form')
+        getForm[0].setAttribute('formId', props.id)
+        console.log("Form?: ", getForm[0])
+		overlay.style.display = "block"
     }
 
     return (
@@ -43,6 +46,7 @@ const Question = (props) => {
                 ))}
                     */}
             </div>
+            
         </div>  
     );
 }

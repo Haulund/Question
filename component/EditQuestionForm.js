@@ -13,17 +13,22 @@ const EditQuestionForm = (props) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-
+		
 		// combining values for state
 		const editedQuestion = {
-			id: props.id,
+			id: e.target.attributes.formid.value,
 			title: e.target[0].value,
 			desc: e.target[1].value	
 		}
 
 		dispatch({type: 'EDIT_QUESTION', payload: editedQuestion})
-					
-		console.log("props: ", props.id)
+
+		// reset
+		editedQuestion = {
+			id: null,
+			title: null,
+			desc: null	
+		}
 
 		// closing dialog
 		closeDialog()

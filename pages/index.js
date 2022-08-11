@@ -137,7 +137,7 @@ const Home = () => {
 			<div className="dialog-overlay" id="dialogEditQuestion">
 				<div className="dialog dialog-edit-question">
 					<div className="dialog-content">
-						<EditQuestionForm id={1}/>
+						<EditQuestionForm />
 					</div>
 				</div>
 			</div>
