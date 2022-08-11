@@ -2,16 +2,29 @@
 import Question from "./Question";
 
 // hooks
-import { useQuestionsContext } from '../context/questions'
+import { useQuestionsContext } from '../hooks/useQuestionsContext'
+import { useEffect } from "react";
 
-const QuestionList = (props) => {
-    const [arrayQuestions, setArrayQuestions] = useQuestionsContext()
-    console.log(arrayQuestions)
+const QuestionList = () => {
+    const input = {id: 1, title: "spørgsmål 1", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel nisl eu massa mollis finibus. Aenean pulvinar lacus ut purus laoreet egestas."}
+        
+    const { questions, dispatch } = useQuestionsContext()
+    
+    useEffect(() => {
+        console.log('LIST: ', questions)
 
+    
+        dispatch({type:'SET_QUESTIONS', payload: input})
+    },[dispatch])
+    
+    
+    
     return (
         <>
-            {arrayQuestions.map(question=>(
+            {questions && questions.map(question=>(
                 <Question 
+                    key={question.id.toString()}
+                    id={question.id.toString()}
                     title={question.title}
                     desc={question.desc}
                     inputs={question.inputs}

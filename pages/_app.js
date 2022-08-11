@@ -1,11 +1,11 @@
-import { QuestionsProvider } from '../context/questions'
+import { QuestionsContextProvider } from '../context/QuestionsContext'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <QuestionsProvider>
+    <QuestionsContextProvider>
       <Component {...pageProps} />
-    </QuestionsProvider>
+    </QuestionsContextProvider>
   )
 }
 

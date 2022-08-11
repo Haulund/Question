@@ -1,34 +1,33 @@
+import { useEffect } from 'react'
 import { useQuestionsContext } from '../hooks/useQuestionsContext'
 
-const AddQuestionForm = () => {
-	const { dispatch } = useQuestionsContext()
+const EditQuestionForm = (props) => {
+	const { questions, dispatch } = useQuestionsContext()
 
-    const closeDialog = e => {
-		const overlay = document.querySelectorAll('#dialogAddQuestion')
+	const closeDialog = () => {
+		const overlay = document.querySelectorAll(' #dialogEditQuestion')
 		overlay.forEach( (item) => {
 			item.style.display = "none"
 		})
 	}
 
-		const handleSubmit = (e) => {
-			e.preventDefault();
-						
-			//create ID
-			const id = Math.floor(Math.random() * 1000)
+	const handleSubmit = (e) => {
+		e.preventDefault();
 
-			// combining values for state
-			const newQuestion = {
-				id: id,
-				title: e.target[0].value,
-				desc: e.target[1].value	
-			}
-
-			// dispatching action for global state change
-			dispatch({type: 'CREATE_QUESTION', payload: newQuestion})
-
-			// closing dialog
-			closeDialog()
+		// combining values for state
+		const editedQuestion = {
+			id: props.id,
+			title: e.target[0].value,
+			desc: e.target[1].value	
 		}
+
+		dispatch({type: 'EDIT_QUESTION', payload: editedQuestion})
+					
+		console.log("props: ", props.id)
+
+		// closing dialog
+		closeDialog()
+	}
 
     return (
         <form className="form" onSubmit={handleSubmit}>
@@ -48,7 +47,7 @@ const AddQuestionForm = () => {
 								</div>
 							</div>*/}
 							<div className="row">
-								<h1>Opret spørgsmål</h1>
+								<h1>Rediger spørgsmål</h1>
 							</div>
 							<div className="row">
 								<div className="col-12 fieldname">
@@ -57,7 +56,7 @@ const AddQuestionForm = () => {
 									</label>
 								</div>
 								<div className="col-12">
-									<input type="text" id="title" name="title" />
+									<input type="text" id="title" name="title" required />
 								</div>
 							</div>
 							<div className="row">
@@ -67,7 +66,7 @@ const AddQuestionForm = () => {
 									</label>
 								</div>
 								<div className="col-12">
-									<input type="text" id="desc" name="desc" />										
+									<input type="text" id="desc" name="desc"  required />							
 								</div>
 							</div>{/*
 							<div className="row">
@@ -129,4 +128,4 @@ const AddQuestionForm = () => {
     );
 }
  
-export default AddQuestionForm;
+export default EditQuestionForm;

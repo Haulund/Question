@@ -12,6 +12,7 @@ import WelcomeText from '../component/WelcomeText'
 import QuestionList from '../component/QuestionList'
 import QuestionSorter from '../component/QuestionSorter'
 import AddQuestionForm from '../component/AddQuestionForm'
+import EditQuestionForm from '../component/EditQuestionForm'
 import EndText from '../component/EndText'
 
 
@@ -127,6 +128,16 @@ const Home = () => {
 				<div className="dialog dialog-add-question">
 					<div className="dialog-content">
 						<AddQuestionForm />
+					</div>
+				</div>
+			</div>
+
+			{/*<!-- Edit question dialog --> */}
+
+			<div className="dialog-overlay" id="dialogEditQuestion">
+				<div className="dialog dialog-edit-question">
+					<div className="dialog-content">
+						<EditQuestionForm id={1}/>
 					</div>
 				</div>
 			</div>
