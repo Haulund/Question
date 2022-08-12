@@ -13,10 +13,8 @@ const Question = (props) => {
 
     const handleEdit = () => {
         const overlay = document.getElementById('dialogEditQuestion')
-        console.log(overlay, props.id)
         const getForm = overlay.getElementsByTagName('form')
         getForm[0].setAttribute('formId', props.id)
-        console.log("Form?: ", getForm[0])
 		overlay.style.display = "block"
     }
 
@@ -37,16 +35,12 @@ const Question = (props) => {
                 </p>
             </div>
             <div className="form">
-                {/*
-
-                {props.inputs.map( input => (
+                {props.inputs.map( (input,index) => (
                     <div className="radio">
-                        <input type="radio" name="radio-1" disabled /> { input.text }
+                        <input type="radio" name={"radio-"+index} disabled /> { input.text }
                     </div>
                 ))}
-                    */}
             </div>
-            
         </div>  
     );
 }

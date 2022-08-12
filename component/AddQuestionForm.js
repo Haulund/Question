@@ -4,31 +4,67 @@ const AddQuestionForm = () => {
 	const { dispatch } = useQuestionsContext()
 
     const closeDialog = e => {
+		e.preventDefault();
+		console.log('CLOSE DIALOG FUNC')
 		const overlay = document.querySelectorAll('#dialogAddQuestion')
-		overlay.forEach( (item) => {
+		overlay.forEach( item => {
 			item.style.display = "none"
 		})
 	}
 
-		const handleSubmit = (e) => {
-			e.preventDefault();
-						
-			//create ID
-			const id = Math.floor(Math.random() * 1000)
 
-			// combining values for state
-			const newQuestion = {
-				id: id,
-				title: e.target[0].value,
-				desc: e.target[1].value	
-			}
+	let numberOfPossibleAnswers = [1]
 
-			// dispatching action for global state change
-			dispatch({type: 'CREATE_QUESTION', payload: newQuestion})
 
-			// closing dialog
-			closeDialog()
+
+	const possibleAnswerTemplate = (
+		<div className="question">
+			<div className="question-type">
+				<input type="radio" disabled />
+			</div>
+			<div className="question-options">
+				<div className="question-option-delete"></div>
+				<div className="question-option-sort"></div>
+			</div>
+			<input type="text" />
+		</div>
+	)
+
+	const handleAddPossibleAnswer = (e) => {
+		
+		console.log('HANDLE ADD POS ANS FUNC')
+		let result = numberOfPossibleAnswers.push(1)
+		console.log(result)
+		return result
+	}
+	
+
+	const handleSubmit = (e) => {
+		console.log('HANDLE SUBMIT FUNC')
+		e.preventDefault();
+		console.log(
+			e.target["title"].value
+		)
+					
+		//create ID
+		const id = Math.floor(Math.random() * 1000)
+
+		//create possible answers
+		
+
+		// combining values for state
+		const newQuestion = {
+			id: id,
+			title: e.target[0].value,
+			desc: e.target[1].value	
 		}
+
+		// dispatching action for global state change
+		//dispatch({type: 'CREATE_QUESTION', payload: newQuestion})
+
+		// closing dialog
+		closeDialog()
+	}
 
     return (
         <form className="form" onSubmit={handleSubmit}>
@@ -69,7 +105,9 @@ const AddQuestionForm = () => {
 								<div className="col-12">
 									<input type="text" id="desc" name="desc" />										
 								</div>
-							</div>{/*
+							</div>
+
+							{/* Vælg svartype*/}
 							<div className="row">
 								<div className="col-3 fieldname">
 									<label>
@@ -83,6 +121,8 @@ const AddQuestionForm = () => {
 									</select>
 								</div>
 							</div>
+
+							{/* Vælg svarmulgiheder*/}
 							<div className="row">
 								<div className="col-12">
 									<div style={{borderBottom: '1px solid #8a53a6',padding: '10px 0 10px 0',color: '#8a53a6'}}>
@@ -90,33 +130,15 @@ const AddQuestionForm = () => {
 									</div>
 								</div>
 								<div className="col-12">
-									<div className="question">
-										<div className="question-type">
-											<input type="radio" disabled />
-										</div>
-										<div className="question-options">
-											<div className="question-option-delete"></div>
-											<div className="question-option-sort"></div>
-										</div>
-										<input type="text" />
-									</div>
-									<div className="question">
-										<div className="question-type">
-											<input type="radio" disabled />
-										</div>
-										<div className="question-options">
-											<div className="question-option-delete"></div>
-											<div className="question-option-sort"></div>
-										</div>
-										<input type="text" />
-									</div>
+									{ possibleAnswerTemplate }
+									
 								</div>
 								<div className="col-12">
-									<button className="btn btn-secondary-line btn-inline">
+									<button onclick={handleAddPossibleAnswer} className="btn btn-default btn-closedialog">
 										Tilføj svarmulighed
 									</button>
 								</div>
-							</div>*/}
+							</div>
 					<div className="dialog-footer">
 						<button onClick={closeDialog} className="btn btn-default btn-closedialog">
 							Annuller
